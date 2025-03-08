@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Wedding Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #ffcccb;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between; /* Space between the images */
+            align-items: center; /* Center vertically */
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+            flex: 1; /* Allow the title to take up available space */
+        }
+        .header-images {
+            display: flex;
+            align-items: center; /* Center images vertically */
+        }
+        .header-images img {
+            width: 150px; /* Adjust the size as needed */
+            height: auto;
+            margin: 0 10px; /* Space between images */
+            border-radius: 8px; /* Optional: rounded corners */
+        }
+        section {
+            padding: 20px;
+            margin: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        #login {
+            background: #f0f0f0; /* Light background for login section */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 400px; /* Set a maximum width for the login section */
+            margin: 20px auto; /* Center the section horizontally */
+            text-align: left; /* Align text to the left */
+        }
+        #login input[type="text"],
+        #login input[type="password"] {
+            width: 100%; /* Full width for input fields */
+            padding: 10px;
+            margin: 5px 0 15px 0; /* Space around input fields */
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #login input[type="submit"] {
+            background-color: #ffcccb; /* Button color */
+            border: none;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #ffcccb;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-images">
+        <img src="images/DSC00214.JPG" alt="DSC00214.JPG"> <!-- Local image -->
+    </div>
+    <h1>Join Us in Celebrating Love</h1>
+    <div class="header-images">
+        <img src="https://via.placeholder.com/150" alt="Image 2"> <!-- Placeholder image -->
+    </div>
+</header>
+
+<section id="our-story">
+    <h2>Our Story</h2>
+    <p>From the first glance to this moment, our journey has been full of love and laughter, and we can’t wait to share our happiness with you!</p>
+</section>
+
+<section id="event-details">
+    <h2>Event Details</h2>
+    <p><strong>Date:</strong> June 15, 2024</p>
+    <p><strong>Time:</strong> 4:00 PM</p>
+    <p><strong>Location:</strong> The Grand Ballroom, 123 Wedding St, City, State</p>
+</section>
+
+<section id="rsvp">
+    <h2>RSVP</h2>
+    <p>Please let us know if you can make it by filling out the form below:</p>
+    <form action="submit_rsvp.php" method="post">
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="attending">Will you attend?</label><br>
+        <select id="attending" name="attending" required>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<section id="login">
+    <h2>Login to View Engagement Media</h2>
+    <p>Please enter your credentials to access our engagement photos and videos:</p>
+    <form action="login.php" method="post"> <!-- Change action to your login processing script -->
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="user" required><br><br>
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="pass" required><br><br>
+        <input type="submit" value="Login">
+    </form>
+</section>
+
+<footer>
+    <p>Thank you for being a part of our special day!</p>
+</footer>
+
+</body>
+</html>
